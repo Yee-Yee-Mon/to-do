@@ -23,6 +23,20 @@ function App() {
     setToDos(prevState => [...prevState, todo ])
   }
 
+  let deleteToDo = (todoId) => {
+    console.log(todoId)
+    //delete server side
+    fetch(`http://localhost:3001/todos/${todoId}`,{
+      method: "DELETE",
+    })
+    //delete client side
+    setToDos(prevState => {
+      return prevState.filter(todo =>{
+        return todo.id != todoId
+      })
+  })
+  }
+
   useEffect(() => {
     fetch("http://localhost:3001/todos")
     .then(response => response.json())
@@ -37,7 +51,7 @@ function App() {
         <h2>Todo App</h2>
         <ToDoForm addToDo={addToDo} />
 
-        <ToDoList todos={todos} />
+        <ToDoList todos={todos} deleteToDo={deleteToDo}/>
 
        <CheckAllAndRemaining />
 
