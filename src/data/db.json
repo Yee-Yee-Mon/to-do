@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "First To Do",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Second To Do",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Third To Do",
+      "completed": false
+    },
+    {
+      "id": 0.6945766796215973,
+      "title": "Test To Do",
+      "completed": false
+    },
+    {
+      "id": 0.5184345945382411,
+      "title": "Test including backend save",
+      "completed": false
+    }
+  ]
+}
