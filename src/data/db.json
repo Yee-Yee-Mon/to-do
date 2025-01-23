@@ -1,18 +1,13 @@
 {
   "todos": [
     {
-      "id": "2",
-      "title": "Second To Do",
-      "completed": false
-    },
-    {
       "id": "3",
-      "title": "Third To Do",
+      "title": "Third To Do updated",
       "completed": false
     },
     {
       "id": "0.6945766796215973",
-      "title": "Test To Do",
+      "title": "Test To Do last",
       "completed": false
     }
   ]
