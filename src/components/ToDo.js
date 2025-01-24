@@ -14,10 +14,23 @@ let updateToDoHandler = (e) =>{
     updateToDo(updatedToDo)
     setIsEdit(false)
 }
+
+let handleCheckboxChange = () => {
+    let updatedToDo = {
+        "id" : todo.id,
+        "title" : title,
+        "completed" : !todo.completed
+    }
+    updateToDo(updatedToDo)
+  };
+
   return (
     <li className="todo-item-container">
         <div className="todo-item">
-        <input type="checkbox" />
+        <input type="checkbox" 
+            checked={todo.completed}
+            onChange={handleCheckboxChange}
+        />
         {!isEdit && <span onDoubleClick={ () => setIsEdit(true) } className={`todo-item-label ${todo.completed ? 'line-through' : ''}`}>
             {todo.title}
         </span>}
